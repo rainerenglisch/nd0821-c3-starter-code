@@ -60,3 +60,30 @@ def inference(model, X):
     """
     preds = model.predict(X)
     return preds
+
+
+def compute_model_metrics_on_slice(model, X, y, slice_field, slice_value):
+    """
+    Validates the trained machine learning model using precision, recall, and F1.
+
+    Inputs
+    ------
+    model : ???
+        Trained machine learning model.
+    X : np.array
+        Data used for prediction.
+    slice_field : str
+        Field to be used for slice
+    slice_value : str
+        Value with which data should be sliced
+    Returns
+    -------
+    precision : float
+    recall : float
+    fbeta : float
+    """
+    preds = model.predict(X.loc[slice_field==slice_value])
+    fbeta = fbeta_score(y, preds, beta=1, zero_division=1)
+    precision = precision_score(y, preds, zero_division=1)
+    recall = recall_score(y, preds, zero_division=1)
+    return precision, recall, fbeta

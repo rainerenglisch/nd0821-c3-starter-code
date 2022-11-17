@@ -29,11 +29,8 @@ X_test, y_test, _, _ = process_data(
     test, categorical_features=cat_features, label="salary", encoder=encoder, lb=lb, training=False
 )
 
-#df_describe = pd.DataFrame(y_train)
-#print(df_describe.iloc[:,0].unique())
+print(X_train)
 # Process the test data with the process_data function.
-
-# Train and save a model.
 print('Train model')
 model = train_model(X_train, y_train)
 print('Compute metrics on test set')
@@ -41,5 +38,6 @@ preds = inference(model, X_test)
 precision, recall, fbeta = compute_model_metrics(y_test, preds)
 print(f'precision={precision:.2f}, recall={recall:.2f}, fbeta={fbeta:.2f}')
 filename = './starter/model/model.pickle'
+# Train and save a model.
 print(f'Save model to {filename}')
 pickle.dump(model, open(filename, 'wb'))
