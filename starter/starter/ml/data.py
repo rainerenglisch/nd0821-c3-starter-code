@@ -71,7 +71,7 @@ def process_data(
     #X_categorical=pd.DataFrame(X_categorical, columns=encoder.get_feature_names_out())
     #X = pd.concat([X_continuous, X_categorical], axis=1)
     #print(X.shape)
-    print(list(X_continuous.columns.values) + list(encoder.get_feature_names_out()))
+    #print(list(X_continuous.columns.values) + list(encoder.get_feature_names_out()))
     #print()
     X= pd.DataFrame(X, columns=list(X_continuous.columns.values) + list(encoder.get_feature_names_out()))
-    return X, y, encoder, lb
+    return X, pd.Series(y), encoder, lb

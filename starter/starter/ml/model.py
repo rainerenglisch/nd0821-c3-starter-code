@@ -62,7 +62,7 @@ def inference(model, X):
     return preds
 
 
-def compute_model_metrics_on_slice(model, X, y, slice_field, slice_value):
+def compute_model_metrics_on_slices(model, X, y, categorical_features, encoder, fname='./starter/model/metric_of_slices.txt'):
     """
     Validates the trained machine learning model using precision, recall, and F1.
 
@@ -72,18 +72,31 @@ def compute_model_metrics_on_slice(model, X, y, slice_field, slice_value):
         Trained machine learning model.
     X : np.array
         Data used for prediction.
-    slice_field : str
-        Field to be used for slice
-    slice_value : str
-        Value with which data should be sliced
+    categorical_features: list[str]
+        List containing the names of the categorical features (default=[])
+    encoder : sklearn.preprocessing._encoders.OneHotEncoder
+        Trained sklearn OneHotEncoder
+    fname : file in which metrics info is stored
     Returns
     -------
-    precision : float
-    recall : float
-    fbeta : float
+    None
+
     """
-    preds = model.predict(X.loc[slice_field==slice_value])
-    fbeta = fbeta_score(y, preds, beta=1, zero_division=1)
-    precision = precision_score(y, preds, zero_division=1)
-    recall = recall_score(y, preds, zero_division=1)
-    return precision, recall, fbeta
+    #print(categorical_features)
+    with open(fname, 'w') as out:
+        for cat in categorical_features:
+            #print(cat)
+            cat_feature_names = [feat for feat in encoder.get_feature_names_out() if feat.startswith(cat)]
+            #print(cat_feature_names)
+            for cat_feature_name in cat_feature_names:
+                #print(cat_feature_name)
+                filter = X[cat_feature_name]==1.
+                X_i = X.loc[filter]
+                y_i = y.loc[filter]
+                if X_i.size > 0:
+                    preds = model.predict(X_i)
+                    fbeta = fbeta_score(y_i, preds, beta=1, zero_division=1)
+                    precision = precision_score(y_i, preds, zero_division=1)
+                    recall = recall_score(y_i, preds, zero_division=1)
+                    out.write(f'Slicing categorical feature: {cat} for value {cat_feature_name}\n')
+                    out.write(f'precision={precision:.2f}, recall={recall:.2f}, fbeta={fbeta:.2f}\n')
