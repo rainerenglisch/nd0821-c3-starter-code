@@ -6,13 +6,13 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.exceptions import NotFittedError
 
-from ..ml.data import process_data
-from ..ml.model import compute_model_metrics, train_model, inference
+from starter.starter.ml.data import process_data
+from starter.starter.ml.model import compute_model_metrics, train_model, inference
 
 
 @pytest.fixture
 def my_data():
-    data = pd.read_csv('../../data/census_clean.csv')
+    data = pd.read_csv('./starter/data/census_clean.csv')
     return data
 
 @pytest.fixture
