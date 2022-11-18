@@ -1,7 +1,8 @@
 # Script to train machine learning model.
 
 # Add the necessary imports for the starter code.
-import pickle
+
+from joblib import dump
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
@@ -54,11 +55,14 @@ print("Compute metrics for each slice of categorical feature")
 compute_model_metrics_on_slices(model, X_test, y_test, cat_features, encoder)
 
 # Train and save a model.
-fname_model = './src/model/model.pickle'
-fname_encoder = './src/model/cat_encoder.pickle'
+fname_model = './src/model/model.joblib'
+fname_encoder = './src/model/cat_encoder.joblib'
 fname_feature_names = './src/model/feature_names.txt'
 print(f'Save model to {fname_model} and encoder to {fname_encoder}')
-pickle.dump(model, open(fname_model, 'wb'))
-pickle.dump(encoder, open(fname_encoder, 'wb'))
+
+with open(fname_model, 'wb') as f:
+    dump(model, f, compress='zlib')
+with open(fname_encoder, 'wb') as f:
+    dump(encoder, f, compress='zlib')
 with open(fname_feature_names, 'w') as out:
     out.write(str(train.columns.values))

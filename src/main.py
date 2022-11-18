@@ -1,7 +1,7 @@
 # Put the code for your API here.
 # uvicorn  starter.main:app --reload 
 import os
-import pickle
+from joblib import  load
 import pandas as pd
 import numpy as np
 
@@ -88,13 +88,16 @@ For 50K = True
   "native_country": "United-States"
 }
 """
-fname_model = './src/model/model.pickle'
-fname_encoder = './src/model/cat_encoder.pickle'
+fname_model = './src/model/model.joblib'
+fname_encoder = './src/model/cat_encoder.joblib'
 #fname_feature_names = './starter/model/feature_names.txt'
-model=pickle.load(open(fname_model, 'rb'))
-encoder=pickle.load(open(fname_encoder, 'rb'))
-#model=pickle.load(fname_model)
-#encoder=pickle.load(fname_encoder)
+#model=pickle.load(open(fname_model, 'rb'))
+#encoder=pickle.load(open(fname_encoder, 'rb'))
+with open(fname_model, 'rb') as f:
+    model=load(f)
+with open(fname_encoder, 'rb') as f:
+    encoder=load(f)
+
 
 @app.get("/forecasts/{item_id}")
 async def get_items(item_id: int):
