@@ -100,7 +100,7 @@ async def get_items(item_id: int):
     return {"fetch": f"Cheers from item {item_id}"}
 
 # This allows sending of data (our TaggedItem) via POST to the API.
-@app.post("/forecast/")
+@app.post("/forecasts/")
 async def forecast(item: InputFeatures):
     # convert to pandas dataframe
     data = [item]
