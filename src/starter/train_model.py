@@ -54,9 +54,9 @@ print("Compute metrics for each slice of categorical feature")
 compute_model_metrics_on_slices(model, X_test, y_test, cat_features, encoder)
 
 # Train and save a model.
-fname_model = './starter/model/model.pickle'
-fname_encoder = './starter/model/cat_encoder.pickle'
-fname_feature_names = './starter/model/feature_names.txt'
+fname_model = './src/model/model.pickle'
+fname_encoder = './src/model/cat_encoder.pickle'
+fname_feature_names = './src/model/feature_names.txt'
 print(f'Save model to {fname_model} and encoder to {fname_encoder}')
 pickle.dump(model, open(fname_model, 'wb'))
 pickle.dump(encoder, open(fname_encoder, 'wb'))
