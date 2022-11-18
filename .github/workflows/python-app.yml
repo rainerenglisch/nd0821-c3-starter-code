@@ -36,7 +36,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install flake8 pytest
-        if [ -f ./starter/requirements.txt ]; then pip install -r ./starter/requirements.txt; fi
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Setup dvc
       run: |
         dvc remote add -d myremote -f s3://udc-ml-devops-project3
