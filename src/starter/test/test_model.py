@@ -12,7 +12,7 @@ from src.starter.ml.model import compute_model_metrics, train_model, inference
 
 @pytest.fixture
 def my_data():
-    data = pd.read_csv('./starter/data/census_clean.csv')
+    data = pd.read_csv('./src/data/census_clean.csv')
     return data
 
 @pytest.fixture
