@@ -1,17 +1,19 @@
 # Model Card
-
 For additional information see the Model Card paper: https://arxiv.org/pdf/1810.03993.pdf
 
 ## Model Details
 The model is a trained random forest model trained on the public "Census Income Data Set":
 https://archive.ics.uci.edu/ml/datasets/census+income
+
 ## Intended Use
 It predicts whether income exceeds $50K/yr based on census data. 
 
 ## Training Data
 The training data comprises 80% of the original data with 390720 records having 108 features. Categorical features were one hot encoded.
+
 ## Evaluation Data
 Evaluation data comprises 20% of the original data with 97695 records.
+
 ## Metrics
 Metrics on test set
 precision=0.73, recall=0.63, fbeta=0.68
@@ -35,6 +37,9 @@ Slicing categorical feature: native-country for value native-country_France
 precision=1.00, recall=0.00, fbeta=0.00
 Slicing categorical feature: education for value education_1st-4th
 precision=1.00, recall=0.00, fbeta=0.00
+
 ## Ethical Considerations
+The data has a racial bias. That is, if you change of an input the race e.g. from white to black (or similar) than the chance of a 50K salary is drastically reduced. You should not use it in critical environments e.g. to determine the salary of an employee (because of the race bias).
 
 ## Caveats and Recommendations
+The model was not trained in an elaborate environment. Concretely, only one model type, random forest classifier, was used and no hyperparameter tuning was considered.
