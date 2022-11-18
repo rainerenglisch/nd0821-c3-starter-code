@@ -17,7 +17,8 @@ if "DYNO" in os.environ and os.path.isdir(".dvc"):
 # Import Union since our Item object will have tags that can be strings or a list.
 from typing import Union 
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Body
+
 # BaseModel from Pydantic is used to define data objects.
 from pydantic import BaseModel
 
@@ -53,41 +54,6 @@ cat_features = [
     "native_country",
 ]
 
-"""
-For 50K == False
-{
-  "age": 39,
-  "workclass": "State-gov",
-  "fnlgt": 77516,
-  "education": "Bachelors",
-  "marital_status": "Never-married",
-  "occupation": "Adm-clerical",
-  "relationship": "Not-in-family",
-  "race": "White",
-  "sex": "Male",
-  "capital_gain": 2174,
-  "capital_loss": 0,
-  "hours_per_week": 40,
-  "native_country": "United-States"
-}
-For 50K = True
-40,Private,193524,Doctorate,16,Married-civ-spouse,Prof-specialty,Husband,White,Male,0,0,60,United-States,>50K
-{
-  "age": 40,
-  "workclass": "Private",
-  "fnlgt": 193524,
-  "education": "Doctorate",
-  "marital_status": "Married-civ-spouse",
-  "occupation": "Prof-specialty",
-  "relationship": "Husband",
-  "race": "White",
-  "sex": "Male",
-  "capital_gain": 0,
-  "capital_loss": 0,
-  "hours_per_week": 60,
-  "native_country": "United-States"
-}
-"""
 fname_model = './src/model/model.joblib'
 fname_encoder = './src/model/cat_encoder.joblib'
 #fname_feature_names = './starter/model/feature_names.txt'
@@ -105,7 +71,23 @@ async def get_items(item_id: int):
 
 # This allows sending of data (our TaggedItem) via POST to the API.
 @app.post("/forecasts/")
-async def forecast(item: InputFeatures):
+async def forecast(item: InputFeatures = Body(
+    example={
+        "age": 40,
+        "workclass": "Private",
+        "fnlgt": 193524,
+        "education": "Doctorate",
+        "marital_status": "Married-civ-spouse",
+        "occupation": "Prof-specialty",
+        "relationship": "Husband",
+        "race": "White",
+        "sex": "Male",
+        "capital_gain": 0,
+        "capital_loss": 0,
+        "hours_per_week": 60,
+        "native_country": "United-States"
+        }
+)):
     # convert to pandas dataframe
     data = [item]
     X = pd.DataFrame([s.__dict__ for s in data])
