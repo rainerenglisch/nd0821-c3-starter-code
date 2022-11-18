@@ -87,8 +87,8 @@ For 50K = True
   "native_country": "United-States"
 }
 """
-fname_model = './model/model.pickle'
-fname_encoder = './model/cat_encoder.pickle'
+fname_model = './src/model/model.pickle'
+fname_encoder = './src/model/cat_encoder.pickle'
 #fname_feature_names = './starter/model/feature_names.txt'
 model=pickle.load(open(fname_model, 'rb'))
 encoder=pickle.load(open(fname_encoder, 'rb'))
