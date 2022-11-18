@@ -68,10 +68,8 @@ with open(fname_encoder, 'rb') as f:
 @app.get("/forecasts/{item_id}")
 async def get_items(item_id: int):
     return {"fetch": f"Cheers from item {item_id}"}
-
-# This allows sending of data (our TaggedItem) via POST to the API.
-@app.post("/forecasts/")
-async def forecast(item: InputFeatures = Body(
+"""
+= Body(
     example={
         "age": 40,
         "workclass": "Private",
@@ -87,7 +85,11 @@ async def forecast(item: InputFeatures = Body(
         "hours_per_week": 60,
         "native_country": "United-States"
         }
-)):
+)
+"""
+# This allows sending of data (our TaggedItem) via POST to the API.
+@app.post("/forecasts/")
+async def forecast(item: InputFeatures ):
     # convert to pandas dataframe
     data = [item]
     X = pd.DataFrame([s.__dict__ for s in data])
