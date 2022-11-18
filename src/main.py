@@ -5,7 +5,7 @@ from joblib import  load
 import pandas as pd
 import numpy as np
 
-from src.ml.model import inference
+from ml.model import inference
 
 if "DYNO" in os.environ and os.path.isdir(".dvc"):
     os.system("dvc config core.no_scm true")
