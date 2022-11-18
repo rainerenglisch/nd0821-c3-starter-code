@@ -1,0 +1,202 @@
+Slicing categorical feature: workclass for value workclass_?
+precision=0.75, recall=0.39, fbeta=0.52
+Slicing categorical feature: workclass for value workclass_Federal-gov
+precision=0.84, recall=0.71, fbeta=0.77
+Slicing categorical feature: workclass for value workclass_Local-gov
+precision=0.78, recall=0.57, fbeta=0.66
+Slicing categorical feature: workclass for value workclass_Never-worked
+precision=1.00, recall=1.00, fbeta=1.00
+Slicing categorical feature: workclass for value workclass_Private
+precision=0.72, recall=0.61, fbeta=0.66
+Slicing categorical feature: workclass for value workclass_Self-emp-inc
+precision=0.80, recall=0.75, fbeta=0.77
+Slicing categorical feature: workclass for value workclass_Self-emp-not-inc
+precision=0.68, recall=0.42, fbeta=0.52
+Slicing categorical feature: workclass for value workclass_State-gov
+precision=0.81, recall=0.64, fbeta=0.71
+Slicing categorical feature: workclass for value workclass_Without-pay
+precision=0.00, recall=1.00, fbeta=0.00
+Slicing categorical feature: education for value education_10th
+precision=0.75, recall=0.43, fbeta=0.55
+Slicing categorical feature: education for value education_11th
+precision=1.00, recall=0.20, fbeta=0.33
+Slicing categorical feature: education for value education_12th
+precision=0.50, recall=0.29, fbeta=0.36
+Slicing categorical feature: education for value education_1st-4th
+precision=1.00, recall=0.00, fbeta=0.00
+Slicing categorical feature: education for value education_5th-6th
+precision=1.00, recall=0.33, fbeta=0.50
+Slicing categorical feature: education for value education_7th-8th
+precision=0.33, recall=0.10, fbeta=0.15
+Slicing categorical feature: education for value education_9th
+precision=0.50, recall=0.50, fbeta=0.50
+Slicing categorical feature: education for value education_Assoc-acdm
+precision=0.60, recall=0.51, fbeta=0.55
+Slicing categorical feature: education for value education_Assoc-voc
+precision=0.63, recall=0.51, fbeta=0.56
+Slicing categorical feature: education for value education_Bachelors
+precision=0.79, recall=0.74, fbeta=0.76
+Slicing categorical feature: education for value education_Doctorate
+precision=0.84, recall=0.86, fbeta=0.85
+Slicing categorical feature: education for value education_HS-grad
+precision=0.61, recall=0.38, fbeta=0.46
+Slicing categorical feature: education for value education_Masters
+precision=0.83, recall=0.81, fbeta=0.82
+Slicing categorical feature: education for value education_Preschool
+precision=1.00, recall=1.00, fbeta=1.00
+Slicing categorical feature: education for value education_Prof-school
+precision=0.85, recall=0.93, fbeta=0.89
+Slicing categorical feature: education for value education_Some-college
+precision=0.68, recall=0.49, fbeta=0.57
+Slicing categorical feature: marital_status for value marital_status_Divorced
+precision=0.72, recall=0.34, fbeta=0.46
+Slicing categorical feature: marital_status for value marital_status_Married-AF-spouse
+precision=1.00, recall=0.50, fbeta=0.67
+Slicing categorical feature: marital_status for value marital_status_Married-civ-spouse
+precision=0.74, recall=0.64, fbeta=0.69
+Slicing categorical feature: marital_status for value marital_status_Married-spouse-absent
+precision=1.00, recall=0.20, fbeta=0.33
+Slicing categorical feature: marital_status for value marital_status_Never-married
+precision=0.77, recall=0.40, fbeta=0.53
+Slicing categorical feature: marital_status for value marital_status_Separated
+precision=0.88, recall=0.64, fbeta=0.74
+Slicing categorical feature: marital_status for value marital_status_Widowed
+precision=1.00, recall=0.12, fbeta=0.21
+Slicing categorical feature: occupation for value occupation_?
+precision=0.75, recall=0.39, fbeta=0.52
+Slicing categorical feature: occupation for value occupation_Adm-clerical
+precision=0.67, recall=0.46, fbeta=0.55
+Slicing categorical feature: occupation for value occupation_Armed-Forces
+precision=1.00, recall=1.00, fbeta=1.00
+Slicing categorical feature: occupation for value occupation_Craft-repair
+precision=0.57, recall=0.37, fbeta=0.45
+Slicing categorical feature: occupation for value occupation_Exec-managerial
+precision=0.78, recall=0.74, fbeta=0.76
+Slicing categorical feature: occupation for value occupation_Farming-fishing
+precision=0.80, recall=0.31, fbeta=0.44
+Slicing categorical feature: occupation for value occupation_Handlers-cleaners
+precision=0.78, recall=0.37, fbeta=0.50
+Slicing categorical feature: occupation for value occupation_Machine-op-inspct
+precision=0.61, recall=0.41, fbeta=0.49
+Slicing categorical feature: occupation for value occupation_Other-service
+precision=0.71, recall=0.18, fbeta=0.29
+Slicing categorical feature: occupation for value occupation_Priv-house-serv
+precision=1.00, recall=1.00, fbeta=1.00
+Slicing categorical feature: occupation for value occupation_Prof-specialty
+precision=0.79, recall=0.79, fbeta=0.79
+Slicing categorical feature: occupation for value occupation_Protective-serv
+precision=0.68, recall=0.37, fbeta=0.48
+Slicing categorical feature: occupation for value occupation_Sales
+precision=0.73, recall=0.63, fbeta=0.68
+Slicing categorical feature: occupation for value occupation_Tech-support
+precision=0.79, recall=0.66, fbeta=0.72
+Slicing categorical feature: occupation for value occupation_Transport-moving
+precision=0.65, recall=0.29, fbeta=0.40
+Slicing categorical feature: relationship for value relationship_Husband
+precision=0.73, recall=0.64, fbeta=0.68
+Slicing categorical feature: relationship for value relationship_Not-in-family
+precision=0.75, recall=0.38, fbeta=0.51
+Slicing categorical feature: relationship for value relationship_Other-relative
+precision=1.00, recall=0.22, fbeta=0.36
+Slicing categorical feature: relationship for value relationship_Own-child
+precision=1.00, recall=0.38, fbeta=0.55
+Slicing categorical feature: relationship for value relationship_Unmarried
+precision=0.79, recall=0.28, fbeta=0.42
+Slicing categorical feature: relationship for value relationship_Wife
+precision=0.79, recall=0.67, fbeta=0.73
+Slicing categorical feature: race for value race_Amer-Indian-Eskimo
+precision=0.50, recall=0.40, fbeta=0.44
+Slicing categorical feature: race for value race_Asian-Pac-Islander
+precision=0.78, recall=0.74, fbeta=0.76
+Slicing categorical feature: race for value race_Black
+precision=0.80, recall=0.53, fbeta=0.64
+Slicing categorical feature: race for value race_Other
+precision=1.00, recall=0.50, fbeta=0.67
+Slicing categorical feature: race for value race_White
+precision=0.73, recall=0.60, fbeta=0.66
+Slicing categorical feature: sex for value sex_Female
+precision=0.80, recall=0.55, fbeta=0.65
+Slicing categorical feature: sex for value sex_Male
+precision=0.73, recall=0.61, fbeta=0.67
+Slicing categorical feature: native_country for value native_country_?
+precision=0.81, recall=0.65, fbeta=0.72
+Slicing categorical feature: native_country for value native_country_Cambodia
+precision=1.00, recall=0.00, fbeta=0.00
+Slicing categorical feature: native_country for value native_country_Canada
+precision=0.57, recall=0.50, fbeta=0.53
+Slicing categorical feature: native_country for value native_country_China
+precision=0.60, recall=0.75, fbeta=0.67
+Slicing categorical feature: native_country for value native_country_Columbia
+precision=0.00, recall=1.00, fbeta=0.00
+Slicing categorical feature: native_country for value native_country_Cuba
+precision=1.00, recall=0.83, fbeta=0.91
+Slicing categorical feature: native_country for value native_country_Dominican-Republic
+precision=1.00, recall=1.00, fbeta=1.00
+Slicing categorical feature: native_country for value native_country_Ecuador
+precision=1.00, recall=1.00, fbeta=1.00
+Slicing categorical feature: native_country for value native_country_El-Salvador
+precision=1.00, recall=1.00, fbeta=1.00
+Slicing categorical feature: native_country for value native_country_England
+precision=0.67, recall=0.25, fbeta=0.36
+Slicing categorical feature: native_country for value native_country_France
+precision=1.00, recall=1.00, fbeta=1.00
+Slicing categorical feature: native_country for value native_country_Germany
+precision=0.86, recall=0.55, fbeta=0.67
+Slicing categorical feature: native_country for value native_country_Greece
+precision=0.33, recall=1.00, fbeta=0.50
+Slicing categorical feature: native_country for value native_country_Guatemala
+precision=0.00, recall=1.00, fbeta=0.00
+Slicing categorical feature: native_country for value native_country_Haiti
+precision=1.00, recall=0.00, fbeta=0.00
+Slicing categorical feature: native_country for value native_country_Honduras
+precision=1.00, recall=1.00, fbeta=1.00
+Slicing categorical feature: native_country for value native_country_Hong
+precision=1.00, recall=1.00, fbeta=1.00
+Slicing categorical feature: native_country for value native_country_Hungary
+precision=1.00, recall=0.00, fbeta=0.00
+Slicing categorical feature: native_country for value native_country_India
+precision=0.73, recall=0.89, fbeta=0.80
+Slicing categorical feature: native_country for value native_country_Iran
+precision=0.00, recall=0.00, fbeta=0.00
+Slicing categorical feature: native_country for value native_country_Ireland
+precision=1.00, recall=1.00, fbeta=1.00
+Slicing categorical feature: native_country for value native_country_Italy
+precision=0.50, recall=0.33, fbeta=0.40
+Slicing categorical feature: native_country for value native_country_Jamaica
+precision=1.00, recall=0.00, fbeta=0.00
+Slicing categorical feature: native_country for value native_country_Japan
+precision=0.86, recall=0.67, fbeta=0.75
+Slicing categorical feature: native_country for value native_country_Laos
+precision=0.00, recall=1.00, fbeta=0.00
+Slicing categorical feature: native_country for value native_country_Mexico
+precision=1.00, recall=0.20, fbeta=0.33
+Slicing categorical feature: native_country for value native_country_Nicaragua
+precision=1.00, recall=1.00, fbeta=1.00
+Slicing categorical feature: native_country for value native_country_Outlying-US(Guam-USVI-etc)
+precision=1.00, recall=1.00, fbeta=1.00
+Slicing categorical feature: native_country for value native_country_Peru
+precision=1.00, recall=1.00, fbeta=1.00
+Slicing categorical feature: native_country for value native_country_Philippines
+precision=0.77, recall=0.71, fbeta=0.74
+Slicing categorical feature: native_country for value native_country_Poland
+precision=1.00, recall=0.00, fbeta=0.00
+Slicing categorical feature: native_country for value native_country_Portugal
+precision=1.00, recall=1.00, fbeta=1.00
+Slicing categorical feature: native_country for value native_country_Puerto-Rico
+precision=1.00, recall=1.00, fbeta=1.00
+Slicing categorical feature: native_country for value native_country_Scotland
+precision=1.00, recall=1.00, fbeta=1.00
+Slicing categorical feature: native_country for value native_country_South
+precision=1.00, recall=1.00, fbeta=1.00
+Slicing categorical feature: native_country for value native_country_Taiwan
+precision=1.00, recall=1.00, fbeta=1.00
+Slicing categorical feature: native_country for value native_country_Thailand
+precision=1.00, recall=0.50, fbeta=0.67
+Slicing categorical feature: native_country for value native_country_Trinadad&Tobago
+precision=1.00, recall=1.00, fbeta=1.00
+Slicing categorical feature: native_country for value native_country_United-States
+precision=0.74, recall=0.60, fbeta=0.66
+Slicing categorical feature: native_country for value native_country_Vietnam
+precision=1.00, recall=0.50, fbeta=0.67
+Slicing categorical feature: native_country for value native_country_Yugoslavia
+precision=0.00, recall=1.00, fbeta=0.00
