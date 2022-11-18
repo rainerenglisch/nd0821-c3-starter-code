@@ -62,7 +62,7 @@ def inference(model, X):
     return preds
 
 
-def compute_model_metrics_on_slices(model, X, y, categorical_features, encoder, fname='./starter/model/metric_of_slices.txt'):
+def compute_model_metrics_on_slices(model, X, y, categorical_features, encoder, fname='./starter/model/slice_output.txt'):
     """
     Validates the trained machine learning model using precision, recall, and F1.
 
