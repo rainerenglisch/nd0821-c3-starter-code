@@ -8,7 +8,7 @@ from sklearn.preprocessing import OneHotEncoder
 from ml.data import process_data
 from ml.model import train_model, compute_model_metrics, inference, compute_model_metrics_on_slices
 # Add code to load in the data.
-data = pd.read_csv('./starter/data/census_clean.csv')
+data = pd.read_csv('./src/data/census_clean.csv')
 # drop eduction_num as it correlates directly to education
 data=data.drop('education-num',axis='columns')
 # change in column names: replace '-' with '_'
