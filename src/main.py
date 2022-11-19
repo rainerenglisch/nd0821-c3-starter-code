@@ -40,6 +40,25 @@ class InputFeatures(BaseModel):
     native_country: str 
     #salary: bool
 
+    class Config:
+        schema_extra = {
+            "example": {
+            "age": 40,
+            "workclass": "Private",
+            "fnlgt": 193524,
+            "education": "Doctorate",
+            "marital_status": "Married-civ-spouse",
+            "occupation": "Prof-specialty",
+            "relationship": "Husband",
+            "race": "White",
+            "sex": "Male",
+            "capital_gain": 0,
+            "capital_loss": 0,
+            "hours_per_week": 60,
+            "native_country": "United-States"
+            }
+    }
+
 app = FastAPI()
 
 #read model
@@ -68,25 +87,7 @@ with open(fname_encoder, 'rb') as f:
 @app.get("/forecasts/{item_id}")
 async def get_items(item_id: int):
     return {"fetch": f"Cheers from item {item_id}"}
-"""
-= Body(
-    example={
-        "age": 40,
-        "workclass": "Private",
-        "fnlgt": 193524,
-        "education": "Doctorate",
-        "marital_status": "Married-civ-spouse",
-        "occupation": "Prof-specialty",
-        "relationship": "Husband",
-        "race": "White",
-        "sex": "Male",
-        "capital_gain": 0,
-        "capital_loss": 0,
-        "hours_per_week": 60,
-        "native_country": "United-States"
-        }
-)
-"""
+
 # This allows sending of data (our TaggedItem) via POST to the API.
 @app.post("/forecasts/")
 async def forecast(item: InputFeatures ):
